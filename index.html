@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PairScope · 最近点对实验室</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#091923;color:#e5f2ec;font:16px/1.6 "DM Sans",system-ui,sans-serif}main{max-width:940px;margin:auto;padding:5vh 5vw}h1{font-size:clamp(40px,8vw,76px);letter-spacing:-.07em;margin:0;color:#abf58a}p{color:#b6c9ca}canvas{width:100%;display:block;background:#102630;border:1px solid #39505a;border-radius:12px;touch-action:none;cursor:crosshair}button{font:inherit;background:#183540;color:inherit;border:1px solid #43606a;padding:7px 16px;border-radius:8px;cursor:pointer}button:disabled{opacity:.4}button.primary{background:#abf58a;color:#13271c}nav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}output{color:#abf58a;font-family:monospace}small{color:#b6c9ca}h2{font-size:1.25rem;margin-bottom:0}
+</style><main><h1>PairScope</h1><p>最近点对实验室 · 点击空白添加点，拖动已有点改变布局。</p>
+<canvas id="board" width="800" height="360" aria-label="交互点阵，金色线为当前比较，绿色线为当前子问题的最短距离"></canvas>
+<nav><button id="prev">← 上一步</button><button class="primary" id="next">下一步 →</button><button id="random">随机点阵</button><button id="reset">分割线挑战</button></nav>
+<output id="metrics"></output><h2 id="message" aria-live="polite"></h2><small>绿色线表示当前子问题的最短距离，金色虚线表示正在比较的点对。</small></main>
+<script src="solver.js"></script><script src="app.js"></script></html>
